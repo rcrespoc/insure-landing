@@ -1,0 +1,294 @@
+:root{
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+html{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* -------------------- ESTILOS -------------------- */
+/* -------------------- HEADER -------------------- */
+.header-logo-link > a{
+  width: 150px;
+}
+.header{
+  justify-content: space-between;
+  align-items: center;
+}
+.menu{
+  top: 4.3rem;
+  background-color: var(--very-dark-violet);
+  height: calc(100vh - 4.3rem);
+}
+.menu > a{
+  color: var(--very-light-gray);
+  margin: 0 1rem;
+  letter-spacing: 1.5px;
+}
+.menu > a:last-of-type{
+  border: thin solid var(--very-light-gray);
+}
+.menu > img{
+  position: absolute;
+  height: 20rem;
+  bottom: 0;
+}
+@media screen and (min-width: 68rem){
+  .menu{
+    background-color: transparent;
+    height: auto;
+    flex-basis: 50%;
+    justify-content: flex-end;
+  }
+  .menu > a{
+    color: var(--dark-grayish-violet);
+    padding: .2rem .5rem;
+    margin: 0;
+    margin-left: 1rem;
+    font-size: .8rem;
+    font-weight: bold;
+  }
+  .menu > a:first-child{
+    margin-left: 0;
+  }
+  .menu > a:last-of-type{
+    border: thin solid var(--very-dark-violet);
+  }
+  .menu > img{
+    display: none;
+  }
+}
+@media screen and (min-width: 96rem){
+  .header-logo{
+    padding-left: 7.5rem;
+  }
+}
+
+/* -------------------- HERO SECTION -------------------- */
+.hero-section > .container{
+  max-width: 100%;
+}
+.hero-section{
+  background-color: var(--dark-violet);
+}
+.hero-body{
+  position: relative;
+}
+.hero-body a{
+  border: thin solid var(--very-light-gray);
+  font-size: .5rem;
+  color: var(--very-light-gray);
+}
+.hero-body::after,
+.hero-body::before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hero-body::before{
+  background-image: url(../images/bg-pattern-intro-left-mobile.svg);
+  top: -3px;
+  left: 0;
+}
+.hero-body::after{
+  background-image: url(../images/bg-pattern-intro-right-mobile.svg);
+  height: 300px;
+  bottom: -9rem;
+  right: 0;
+}
+.hero-body > hr{
+  display: none;
+}
+@media screen and (min-width: 68rem){
+  .hero-body::before{
+    background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+    height: 300px;
+    top: auto;
+    left: -6.2rem;
+    bottom: -12rem;
+  }
+  .hero-body::after{
+    background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+    top: 0;
+    right: -6.2rem;
+    width: 200px;
+  }
+  .hero-section > .container{
+    max-width: 80%;
+  }
+  .hero-image > img{
+    position: absolute;
+    max-width: 20rem;
+    right: 4rem;
+    top: 6rem;
+  }
+  .hero-body > .container{
+    width: 60%;
+    margin-left: 0;
+  }
+  .hero-body > .container > h2{
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .hero-body > hr{
+    display: block;
+    width: 10%;
+    position: absolute;
+    top: 3rem;
+  }
+  .hero-body a{
+    font-size: .8rem;
+  }
+}
+@media screen and (min-width: 85rem){
+  .hero-body::before{
+    left: -8.3rem;
+  }
+  .hero-body::after{
+    right: -8.3rem;
+  }
+}
+@media screen and (min-width: 96rem){
+  .hero-body::before{
+    left: -12rem;
+    width: 8rem;
+  }
+  .hero-body::after{
+    right: -38.9rem;
+  }
+  .hero-image > img{
+    right: 20rem;
+    top: 6rem;
+    max-width: 26rem;
+  }
+}
+
+/* -------------------- WE'RE DIFFERENT -------------------- */
+.we-re-different-title{
+  position: relative;
+}
+.we-re-different-title > hr{
+  display: none;
+}
+@media screen and (min-width: 68rem){
+  .we-re-different-title > hr{
+    display: block;
+    position: absolute;
+    top: -2rem;
+    width: 10%;
+  }
+  .we-re-different-items{
+    justify-content: space-between;
+  }
+  .we-re-different-item{
+    flex-basis: calc(33% - 1rem);
+  }
+}
+
+/* -------------------- FIND OUT SECTION -------------------- */
+.find-out-section{
+  background-color: var(--dark-violet);
+  position: relative;
+}
+.find-out-section::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 15rem;
+  background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.find-out-title a{
+  border: thin solid var(--very-light-gray);
+  font-size: .5rem;
+  color: var(--very-light-gray);
+}
+@media screen and (min-width: 68rem){
+  .find-out-section::after{
+    background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+    width: 20rem;
+  }
+  .find-out-title{
+    align-items: center;
+    justify-content: space-between;
+  }
+  .find-out-title > h2{
+    width: 40%;
+  }
+  .find-out-title > a{
+    width: 15%;
+    z-index: 2;
+    font-size: .8rem;
+  }
+}
+@media screen and (min-width: 96rem){
+  .find-out-section::after{
+    width: 17rem;
+  }
+  
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer{
+  background-color: var(--very-light-gray);
+  position: relative;
+}
+.footer::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15rem;
+  background-image: url(../images/bg-pattern-footer-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.footer-sociales{
+  justify-content: space-between;
+}
+.footer-title > img{
+  max-width: 100px;
+}
+.footer-title{
+  position: relative;
+  z-index: 2;
+}
+.footer-sociales > a,
+.footer-nav > h5{
+  color: rgb(121, 118, 118);
+}
+.footer-nav > a{
+  color: var(--very-dark-violet)
+}
+@media screen and (min-width: 68rem){
+  .footer-title{
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-sociales{
+    flex-basis: 10%;
+  }
+  .footer-navs{
+    width: 85%;
+    justify-content: space-between;
+  }
+}
+
+/* -------------------- ATTRIBUTION -------------------- */
+.attribution{
+  background-color: var(--dark-violet);
+}
+.attribution > a{
+  color: var(--dark-grayish-violet);
+}
